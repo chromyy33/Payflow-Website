@@ -1,0 +1,74 @@
+.pricing {
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    margin-top: 7.6rem;
+    align-items: end;
+  }
+  &--card {
+    border: 1px solid #dbe5fd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // height: 68rem;
+    padding: 7.6rem 3.1rem;
+    box-shadow: 0px 0.6rem 1rem rgba($clr-blue-900, 0.05);
+  }
+  &--heading {
+    font-size: 2.5rem;
+    color: $clr-blue-700;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+  }
+  &--price {
+    font-size: 3.9rem;
+    color: $clr-blue-700;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+  }
+  &--text {
+    margin-bottom: 1.2rem;
+  }
+  &--features--list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 4.8rem;
+  }
+  &--feature {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  &--icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    align-self: start;
+  }
+  &--disabled {
+    color: rgba($clr-grey-300, 0.75);
+  }
+  p {
+    line-height: 140%;
+  }
+  span {
+    font-size: 1.6rem;
+    color: $clr-grey-300;
+    font-weight: normal;
+  }
+  &--subtext {
+    text-align: center;
+    color: $clr-grey-300;
+    margin-top: 7.6rem;
+    margin-bottom: 3.9rem;
+  }
+  &--span {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+.up {
+  margin-bottom: 6.4rem;
+}

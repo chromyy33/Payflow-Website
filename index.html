@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayFlow-Invoices Made Easy</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header id="header">
+      <!-- LOGO -->
+      <nav class="nav" id="home">
+        <a href="#">
+          <svg
+            class="nav--logo"
+            xmlns="http://www.w3.org/2000/svg"
+            width="133"
+            height="32"
+            fill="none"
+            viewBox="0 0 133 32"
+          >
+            <path
+              class="nav--logo--dark"
+              fill="#3253A2"
+              d="M23.008 14.547a1.21 1.21 0 1 1-2.422 0 1.21 1.21 0 0 1 2.422 0Zm-4.602-6.055h-4.843a.727.727 0 0 0 0 1.453h4.843a.727.727 0 1 0 0-1.453Zm11.383 5.57v3.876a2.664 2.664 0 0 1-2.664 2.664h-.456l-2.02 5.656a1.695 1.695 0 0 1-1.598 1.125h-1.54a1.695 1.695 0 0 1-1.597-1.125l-.29-.813h-7.28l-.29.813a1.695 1.695 0 0 1-1.596 1.125h-1.54a1.695 1.695 0 0 1-1.598-1.125l-1.537-4.303a10.38 10.38 0 0 1-2.6-6.083 2.18 2.18 0 0 0-1.488 2.066.727.727 0 0 1-1.453 0 3.633 3.633 0 0 1 2.93-3.564 10.426 10.426 0 0 1 10.39-9.757h12.594a.727.727 0 1 1 0 1.453h-3.412A10.404 10.404 0 0 1 27.2 11.4a2.664 2.664 0 0 1 2.59 2.662Zm-1.453 0a1.21 1.21 0 0 0-1.211-1.21h-.443a.726.726 0 0 1-.694-.509 8.961 8.961 0 0 0-8.55-6.273h-3.875a8.961 8.961 0 0 0-6.607 15.016.7.7 0 0 1 .147.242l1.585 4.437a.242.242 0 0 0 .23.165h1.54a.242.242 0 0 0 .229-.161l.46-1.292a.726.726 0 0 1 .685-.485h8.305a.726.726 0 0 1 .684.485l.461 1.294a.243.243 0 0 0 .23.161h1.54a.242.242 0 0 0 .228-.16l2.192-6.14a.726.726 0 0 1 .684-.484h.969a1.211 1.211 0 0 0 1.21-1.21v-3.875Z"
+            />
+            <path
+              class="nav--logo--dark"
+              fill="#3253A2"
+              d="M37.617 25c-.183 0-.325-.05-.425-.15a.63.63 0 0 1-.15-.425V8.1c0-.183.05-.325.15-.425.1-.117.242-.175.425-.175h6.35c1.233 0 2.3.2 3.2.6.917.4 1.625 1 2.125 1.8.5.783.75 1.767.75 2.95 0 1.183-.25 2.167-.75 2.95-.5.783-1.208 1.375-2.125 1.775-.9.4-1.967.6-3.2.6h-4.425v6.25a.578.578 0 0 1-.175.425c-.1.1-.241.15-.425.15h-1.325Zm1.9-8.925h4.325c1.233 0 2.159-.275 2.775-.825.617-.55.925-1.35.925-2.4 0-1.033-.3-1.833-.9-2.4-.6-.567-1.533-.85-2.8-.85h-4.325v6.475Zm16.621 9.175c-.833 0-1.592-.167-2.275-.5a4.399 4.399 0 0 1-1.65-1.35 3.168 3.168 0 0 1-.625-1.925c0-1.15.467-2.067 1.4-2.75.933-.683 2.15-1.133 3.65-1.35l3.725-.525v-.725c0-.8-.233-1.425-.7-1.875-.45-.45-1.192-.675-2.225-.675-.75 0-1.358.15-1.825.45-.45.3-.767.683-.95 1.15-.1.25-.275.375-.525.375h-1.125c-.183 0-.325-.05-.425-.15a.671.671 0 0 1-.125-.4c0-.25.092-.558.275-.925.2-.367.5-.725.9-1.075s.908-.642 1.525-.875c.633-.25 1.4-.375 2.3-.375 1 0 1.842.133 2.525.4.683.25 1.217.592 1.6 1.025.4.433.683.925.85 1.475.183.55.275 1.108.275 1.675v8.1a.578.578 0 0 1-.175.425.54.54 0 0 1-.4.15h-1.15c-.183 0-.325-.05-.425-.15a.63.63 0 0 1-.15-.425V23.35c-.217.3-.508.6-.875.9-.367.283-.825.525-1.375.725-.55.183-1.225.275-2.025.275Zm.525-1.875a4.14 4.14 0 0 0 1.875-.425c.567-.3 1.008-.758 1.325-1.375.333-.617.5-1.392.5-2.325v-.7l-2.9.425c-1.183.167-2.075.45-2.675.85-.6.383-.9.875-.9 1.475 0 .467.133.858.4 1.175.283.3.633.525 1.05.675.433.15.875.225 1.325.225Zm11.65 6.375a.48.48 0 0 1-.35-.15.48.48 0 0 1-.15-.35.82.82 0 0 1 .025-.2 1.3 1.3 0 0 1 .1-.25l1.925-4.575-4.775-11.275c-.083-.2-.124-.342-.124-.425a.509.509 0 0 1 .525-.525h1.224c.167 0 .3.042.4.125a.6.6 0 0 1 .2.3l3.8 9.1 3.9-9.1a.944.944 0 0 1 .2-.3c.1-.083.242-.125.425-.125h1.175c.15 0 .275.05.376.15.1.1.15.217.15.35 0 .083-.042.233-.126.45l-7.1 16.375a.792.792 0 0 1-.225.3c-.083.083-.216.125-.4.125h-1.174ZM80.709 25c-.183 0-.325-.05-.425-.15a.63.63 0 0 1-.15-.425V8.1c0-.183.05-.325.15-.425.1-.117.242-.175.425-.175h10.2c.183 0 .325.058.425.175.1.1.15.242.15.425v1c0 .183-.05.325-.15.425-.1.1-.242.15-.425.15h-8.35V15.5h7.85c.183 0 .325.058.425.175.1.1.15.242.15.425v1a.63.63 0 0 1-.15.425c-.1.1-.242.15-.425.15h-7.85v6.75a.578.578 0 0 1-.175.425c-.1.1-.242.15-.425.15h-1.25Zm14.3 0a.631.631 0 0 1-.425-.15.63.63 0 0 1-.15-.425v-16.6c0-.167.05-.3.15-.4a.579.579 0 0 1 .425-.175h1.175c.183 0 .325.058.425.175.1.1.15.233.15.4v16.6a.63.63 0 0 1-.15.425c-.1.1-.242.15-.425.15h-1.175Zm10.804.25c-1.267 0-2.325-.242-3.175-.725a4.897 4.897 0 0 1-1.95-2c-.45-.867-.7-1.85-.75-2.95a18.986 18.986 0 0 1-.025-1.075c0-.45.008-.808.025-1.075.05-1.117.3-2.1.75-2.95a5.06 5.06 0 0 1 1.975-2c.85-.483 1.9-.725 3.15-.725s2.3.242 3.15.725c.85.483 1.5 1.15 1.95 2 .466.85.725 1.833.775 2.95.016.267.025.625.025 1.075 0 .433-.009.792-.025 1.075-.05 1.1-.3 2.083-.75 2.95-.45.85-1.1 1.517-1.95 2-.85.483-1.909.725-3.175.725Zm0-1.925c1.033 0 1.858-.325 2.475-.975.616-.667.95-1.633 1-2.9.016-.25.025-.567.025-.95s-.009-.7-.025-.95c-.05-1.267-.384-2.225-1-2.875-.617-.667-1.442-1-2.475-1-1.034 0-1.867.333-2.5 1-.617.65-.942 1.608-.975 2.875-.017.25-.025.567-.025.95s.008.7.025.95c.033 1.267.358 2.233.975 2.9.633.65 1.466.975 2.5.975ZM117.95 25c-.216 0-.383-.05-.5-.15a1.477 1.477 0 0 1-.3-.475l-3.55-11.6a.675.675 0 0 1-.05-.25c0-.15.05-.275.15-.375.117-.1.242-.15.375-.15h1.1c.184 0 .325.05.425.15.1.1.167.192.2.275l2.775 9.425 2.975-9.325a.953.953 0 0 1 .2-.35c.117-.117.284-.175.5-.175h.85c.217 0 .384.058.5.175.117.117.184.233.2.35l2.975 9.325 2.775-9.425a.581.581 0 0 1 .175-.275c.1-.1.242-.15.425-.15h1.1a.509.509 0 0 1 .525.525.656.656 0 0 1-.05.25l-3.55 11.6a.898.898 0 0 1-.275.475c-.116.1-.291.15-.525.15h-.975a.97.97 0 0 1-.55-.15.904.904 0 0 1-.275-.475l-2.9-8.95-2.9 8.95a1.05 1.05 0 0 1-.3.475c-.133.1-.316.15-.55.15h-.975Z"
+              opacity=".92"
+            />
+          </svg>
+        </a>
+        <!-- MOBILE LINKS -->
+        <div class="mobile--wrapper hidden">
+          <div class="nav--link--wrapper mobile mobile--links">
+            <a href="#features" class="links m-links">Features </a
+            ><a href="#pricing" class="links">Pricing</a
+            ><a href="#How-it-works" class="links">How it Works? </a
+            ><a href="#testimonial" class="links">Testimonials</a>
+            <a href="#" class="links">Login</a>
+
+            <!--CTA  -->
+            <div class="link-wrapper">
+              <div class="btn wrapper">
+                <a href="#" class="btn-link">Get Started</a>
+                <img src="./assets/arrow-up.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- WEB LINKS -->
+        <div class="nav--link--wrapper">
+          <a href="#features" class="links">Features </a
+          ><a href="#pricing" class="links">Pricing</a
+          ><a href="#How-it-works" class="links">How it Works? </a
+          ><a href="#testimonial" class="links">Testimonials</a>
+        </div>
+        <div class="end--wrapper">
+          <div class="nav--btns">
+            <!-- HAMBURGER -->
+            <svg
+              class="nav--btn nav--btn--menu"
+              height="21"
+              viewBox="0 0 21 21"
+              width="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                fill="none"
+                fill-rule="evenodd"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m4.5 6.5h12" />
+                <path d="m4.498 10.5h11.997" />
+                <path d="m4.5 14.5h11.995" />
+              </g>
+            </svg>
+            <!-- CLOSE -->
+            <svg
+              class="nav--btn nav--btn--close hidden"
+              height="21"
+              viewBox="0 0 21 21"
+              width="21"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g
+                fill="none"
+                fill-rule="evenodd"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                transform="translate(5 5)"
+              >
+                <path d="m10.5 10.5-10-10z" />
+                <path d="m10.5.5-10 10" />
+              </g>
+            </svg>
+          </div>
+          <div class="theme--switch">
+            <div class="theme--switch--icon--box">
+              <div
+                class="theme--switch--icon--wrapper theme--switch--icon--wrapper--light"
+              >
+                <svg
+                  class="theme--switch--icon light--icon"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  width="21"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g
+                    fill="none"
+                    fill-rule="evenodd"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="translate(-210 -1)"
+                  >
+                    <g
+                      opacity=".3"
+                      transform="matrix(.96592583 .25881905 -.25881905 .96592583 214.136029 .477376)"
+                    >
+                      <path
+                        d="m9 13c2.2190012 0 4-1.7631416 4-3.98214286 0-2.21900122-1.7809988-4.01785714-4-4.01785714-2.21900123 0-4 1.78099877-4 4 0 2.2190012 1.78099877 4 4 4z"
+                        transform="matrix(.96592583 -.25881905 .25881905 .96592583 -2.022704 2.636039)"
+                      />
+                      <g
+                        transform="matrix(.8660254 .5 -.5 .8660254 1.4558 4.066879)"
+                      >
+                        <path d="m0 .5h2" />
+                        <path d="m16 .5h2" />
+                      </g>
+                      <g
+                        transform="matrix(.96592583 -.25881905 .25881905 .96592583 .17726 10.84642)"
+                      >
+                        <path d="m0 .5h2" />
+                        <path d="m16 .5h2" />
+                      </g>
+                      <g
+                        transform="matrix(.5 -.8660254 .8660254 .5 4.066879 16.544042)"
+                      >
+                        <path d="m0 .5h2" />
+                        <path d="m16 .5h2" />
+                      </g>
+                      <g
+                        transform="matrix(-.25881905 -.96592583 .96592583 -.25881905 10.846233 17.822607)"
+                      >
+                        <path d="m0 .5h2" />
+                        <path d="m16 .5h2" />
+                      </g>
+                    </g>
+                    <g>
+                      <path d="m220.5 2.5v2" />
+                      <path d="m227 5-1.5 1.5" />
+                      <circle cx="220.5" cy="11.5" r="4" />
+                      <path d="m214 5 1.5 1.5" />
+                      <path d="m220.5 20.5v-2" />
+                      <path d="m227 18-1.5-1.5" />
+                      <path d="m214 18 1.5-1.5" />
+                      <path d="m211.5 11.5h2" />
+                      <path d="m227.5 11.5h2" />
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div
+                class="theme--switch--icon--wrapper theme--switch--icon--wrapper--dark hidden"
+              >
+                <svg
+                  class="theme--switch--icon dark--icon"
+                  height="21"
+                  viewBox="0 0 21 21"
+                  width="21"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m7.5.5c1.3280962 0 2.5698071.36985953 3.6277499 1.01219586-3.14075981.19184303-5.6277499 2.79938976-5.6277499 5.98780414 0 3.1884144 2.48699009 5.7959611 5.6269199 5.9885898-1.0571128.6415507-2.2988237 1.0114102-3.6269199 1.0114102-3.86599325 0-7-3.1340068-7-7 0-3.86599325 3.13400675-7 7-7z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    transform="translate(4 3)"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="nav--end--wrapper">
+            <a href="#" class="nav-links links">Login</a>
+            <!--CTA  -->
+            <div class="link-wrapper">
+              <div class="btn wrapper">
+                <a href="#" class="btn-link">Get Started</a>
+                <img src="./assets/arrow-up.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- MENU BUTTONS -->
+      </nav>
+    </header>
+    <main>
+      <!-- HEDADING PRIMARY -->
+      <h1 class="heading--primary" id="#top">Manage Expenses on the go</h1>
+
+      <p class="subtext">
+        Say goodbye to the stress of invoices and hello to effortless management
+        with PayFlow
+      </p>
+
+      <!-- Small Cards -->
+      <div class="small--cards wrapper">
+        <!-- USER HERO CARD -->
+        <div class="hero--card wrapper">
+          <img
+            src="./assets/system-uicons_user-male.svg"
+            alt="Icon of a user"
+            class="hero--card--icon"
+          />
+          <p class="hero--card--text">1M Users</p>
+        </div>
+        <!-- SUPPORT HERO CARD -->
+
+        <div class="hero--card wrapper">
+          <img
+            src="./assets/support.svg"
+            alt="Icon for support"
+            class="hero--card--icon"
+          />
+          <p class="hero--card--text">24/7 Support</p>
+        </div>
+        <!-- FREE HERO CARD -->
+
+        <div class="hero--card wrapper">
+          <img
+            src="./assets/smiley.svg"
+            alt="Icon of a smiley"
+            class="hero--card--icon"
+          />
+          <p class="hero--card--text">Always Free</p>
+        </div>
+      </div>
+      <!-- CTA -->
+      <div class="cta wrapper">
+        <div class="link-wrapper">
+          <div class="btn wrapper">
+            <a href="#" class="btn-link">Get Started</a>
+            <img src="./assets/arrow-up.svg" alt="Icon of a arrow" />
+          </div>
+        </div>
+        <!-- PLAY ICON -->
+        <div class="secondary--btn wrapper">
+          <a href="#" class="links">How it Works</a>
+          <img src="./assets/play-button.svg " alt="Icon of a play button" />
+        </div>
+      </div>
+      <!-- Hero Image -->
+      <div class="section hero bg">
+        <div class="pattern">
+          <div class="wrapper">
+            <img
+              class="hero--img"
+              src="./images/Hero_Image.webp"
+              alt="Screenshot of th app"
+            />
+          </div>
+        </div>
+        <!-- Social Proof -->
+
+        <div class="social-proof center wrapper">
+          <div class="wrapper col">
+            <h5 class="heading--section mb-31">
+              Join 4,000+ companies already growing
+            </h5>
+            <div class="wrapper partners">
+              <img
+                src="./assets/Company logo-1.svg"
+                alt="Spotify Logo"
+                class="partners--img"
+              />
+              <img
+                src="./assets/Company logo-2.svg"
+                alt="Slack logo"
+                class="partners--img"
+              />
+
+              <img
+                src="./assets/Company logo-3.svg"
+                alt="Dropbox logo"
+                class="partners--img"
+              />
+
+              <img
+                src="./assets/Company logo-4.svg"
+                alt="Webflow logo"
+                class="partners--img"
+              />
+
+              <img
+                src="./assets/Company logo-5.svg"
+                alt="Zoom logo"
+                class="partners--img"
+              />
+
+              <img
+                src="./assets/Company logo.svg"
+                alt="Coinbase logo"
+                class="partners--img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section Features -->
+      <div class="section features" id="features">
+        <!-- SECTION HEADING -->
+        <h2 class="heading--secondary mb-8">Advantages of Payflow</h2>
+        <h5 class="heading--section">Features to simplify your life</h5>
+
+        <div class="features--wrapper">
+          <!-- PAYMENT -->
+          <div class="wrapper col features--card">
+            <div class="wrapper features--icon--cover mb-25">
+              <img
+                src="./assets/reminder.svg"
+                alt="Icon of a clock"
+                class="features--icon"
+              />
+            </div>
+            <div class="features--card--heading mb-16">Payment Reminder</div>
+            <p class="features--card--text">
+              Payflow sends you payment reminders so you never miss a payment or
+              deadline again.
+            </p>
+          </div>
+          <div class="wrapper col features--card">
+            <!-- INVOICES -->
+            <div class="wrapper features--icon--cover mb-25">
+              <img
+                src="./assets/invoices-icon.svg"
+                alt="Icon of an invoice"
+                class="features--icon"
+              />
+            </div>
+            <div class="features--card--heading mb-16">Track Invoices</div>
+            <p class="features--card--text">
+              Payflow automatically tracks your invoices and updates their
+              status in real-time.
+            </p>
+          </div>
+          <div class="wrapper col features--card">
+            <!-- INGEGRATIONS -->
+            <div class="wrapper features--icon--cover mb-25">
+              <img
+                src="./assets/integration-icon.svg"
+                alt="Icon for Integration"
+                class="features--icon"
+              />
+            </div>
+            <div class="features--card--heading mb-16">Easy Intergrations</div>
+            <p class="features--card--text">
+              Payflow integrates with popular softwares, making it easy to
+              manage your data.
+            </p>
+          </div>
+        </div>
+        <!-- SECTION CTA -->
+        <div class="link-wrapper">
+          <div class="btn wrapper">
+            <a href="#" class="btn-link">See all features</a>
+            <img src="./assets/right-arrow.svg" alt="Icon for arrow" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Section How it works -->
+      <!-- SECTION HEADING -->
+      <h2 class="heading--secondary mb-8" id="How-it-works">
+        A simple three step process
+      </h2>
+      <h5 class="heading--section">How it works?</h5>
+      <div class="section works--section">
+        <div class="works">
+          <!-- WORKS_IMAGE -->
+          <div class="wrapper works--img--box">
+            <img
+              src="./images/Create-invoice.webp"
+              alt="Screenshot of the app"
+              class="works--img"
+            />
+          </div>
+          <div class="works--text--box">
+            <img
+              src="./assets/decorative-element.svg"
+              alt="Decorative element"
+              class="works--decoration mb-20"
+            />
+            <!-- WORKS_TEXT -->
+            <div class="works--label mb-31">Easily Create Invoices</div>
+            <div class="works--heading mb-8">1. Create Invoices</div>
+            <p class="works--tex mb-31">
+              To get started, you can create an invoice by filling out the
+              necessary information such as the client's name, address, and the
+              amount due.
+            </p>
+            <div class="link-wrapper works--link--wrapper">
+              <div class="btn wrapper">
+                <a href="#" class="btn-link">Read More</a>
+                <img src="./assets/arrow-up.svg" alt="Screenshot of the app" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="works">
+          <div class="wrapper works--img--box reverse">
+            <!-- WORKS_IMAGE -->
+            <img
+              src="./images/track-invoices.webp"
+              alt="Screenshot of the app"
+              class="works--img"
+            />
+          </div>
+          <!-- WORKS_TEXT -->
+          <div class="works--text--box">
+            <img
+              src="./assets/decorative-element.svg"
+              alt="Decorative element"
+              class="works--decoration mb-20"
+            />
+            <div class="works--label mb-31">The best tracking tool</div>
+            <div class="works--heading mb-8">2. Track Invoices</div>
+            <p class="works--tex mb-31">
+              With Payflow, you can track the status of your invoice, whether it
+              has been viewed, paid, or is overdue.
+            </p>
+            <div class="link-wrapper works--link--wrapper">
+              <div class="btn wrapper">
+                <a href="#" class="btn-link">Read More</a>
+                <img src="./assets/arrow-up.svg" alt="Icon for arrow" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="works">
+          <!-- WORKS_IMAGE -->
+          <div class="wrapper works--img--box">
+            <img
+              src="./images/receive-payments.webp"
+              alt="Screenshotof the app"
+              class="works--img"
+            />
+          </div>
+          <!-- WORKS_TEXT -->
+          <div class="works--text--box">
+            <img
+              src="./assets/decorative-element.svg"
+              alt="Decorative element"
+              class="works--decoration mb-20"
+            />
+            <div class="works--label mb-31">Get Paid Instantly</div>
+            <div class="works--heading mb-8">3.Receive Payments</div>
+            <p class="works--tex mb-31">
+              Once the invoice has been paid, you can mark it as paid and record
+              the payment details.
+            </p>
+            <!-- SECTION CTA -->
+            <div class="link-wrapper works--link--wrapper">
+              <div class="btn wrapper">
+                <a href="#" class="btn-link">Read More</a>
+                <img src="./assets/arrow-up.svg" alt="Icon for arrow" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section pricing" id="pricing">
+        <h2 class="heading--secondary mb-8">
+          Affordable pricing for every need
+        </h2>
+        <h5 class="heading--section">Features to simplify your life</h5>
+        <div class="pricing--grid">
+          <!-- Basic -->
+          <div class="pricing--card">
+            <div class="pricing--heading">Basic</div>
+            <p class="pricing--text">
+              Our basic plan is perfect for small businesses or freelancers who
+              need a simple way to track their invoices.
+            </p>
+            <div class="pricing--price">Free <span>per month</span></div>
+            <div class="pricing--features--list">
+              <!-- Feature 1 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Track up to 50 invoices</p>
+              </div>
+              <!-- Feature 2 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Get automated reminders for overdue invoices</p>
+              </div>
+              <!-- Feature 3 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Access basic reporting toolss</p>
+              </div>
+              <!-- Feature 4 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/cross.svg"
+                  alt="Icon of cross"
+                  class="pricing--icon disabled"
+                />
+                <p class="pricing--disabled">Detailed financial reporting</p>
+              </div>
+              <!-- Feature 5 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/cross.svg"
+                  alt="Icon of cross"
+                  class="pricing--icon disabled"
+                />
+                <p class="pricing--disabled">
+                  Integration with popular accounting software
+                </p>
+              </div>
+            </div>
+            <!-- CTA Button-->
+
+            <a href="#" class="secondary-link">Get Started</a>
+          </div>
+          <!-- Professional -->
+          <div class="pricing--card bg up">
+            <div class="pricing--heading pricing--heading--dark">
+              Professional
+            </div>
+            <p class="pricing--text pricing--text--dark">
+              Our basic plan is perfect for small businesses or freelancers who
+              need a simple way to track their invoices.
+            </p>
+            <div class="pricing--price pricing--heading--dark">
+              $19.99/<span>per month</span>
+            </div>
+            <div class="pricing--features--list pricing--text--dark">
+              <!-- Feature 1 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Track up to 250 invoices</p>
+              </div>
+              <!-- Feature 2 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Get automated reminders for overdue invoices</p>
+              </div>
+              <!-- Feature 3 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Access to advanced reporting tools</p>
+              </div>
+              <!-- Feature 4 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Track partial payments and generate receipts</p>
+              </div>
+              <!-- Feature 5 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/cross.svg"
+                  alt="Icon of cross"
+                  class="pricing--icon disabled"
+                />
+                <p class="pricing--disabled">
+                  Integration with popular accounting software
+                </p>
+              </div>
+            </div>
+            <!-- CTA Button -->
+            <div class="link-wrapper">
+              <div class="btn wrapper full">
+                <a href="#" class="btn-link">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="pricing--card">
+            <div class="pricing--heading">Enterprise</div>
+            <p class="pricing--text">
+              For larger businesses or those with complex invoicing needs.
+            </p>
+            <div class="pricing--price">$49.99/<span>per month</span></div>
+            <!-- Feature 1 -->
+            <div class="pricing--features--list">
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Track unlimited invoices</p>
+              </div>
+              <!-- Feature 2 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Get automated reminders for overdue invoices</p>
+              </div>
+              <!-- Feature 3 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Access to advanced reporting tools</p>
+              </div>
+              <!-- Feature 4 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Track partial payments and generate receipts</p>
+              </div>
+              <!-- Feature 5 -->
+              <div class="pricing--feature">
+                <img
+                  src="./assets/checkbox.svg"
+                  alt="Icon of checkbox"
+                  class="pricing--icon"
+                />
+                <p>Integration with popular accounting software</p>
+              </div>
+            </div>
+
+            <a href="#" class="secondary-link">Get Started</a>
+          </div>
+        </div>
+        <p class="pricing--subtext">
+          24/7 Customer Support. Cancel anytime.
+          <span class="pricing--span">Terms and Conditions</span> apply
+        </p>
+        <div class="link-wrapper">
+          <div class="btn wrapper">
+            <a href="#" class="btn-link">See all plans</a>
+            <img src="./assets/right-arrow.svg" alt="Icon of arrow" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Banner -->
+      <div class="section banner pattern">
+        <!-- CTA AND IMAGE -->
+        <div class="banner--box">
+          <div class="banner--text--box">
+            <h3 class="banner--heading">
+              Stop stressing over your invoices <br />and start tracking them
+              with ease.
+            </h3>
+
+            <div class="wrapper banner--wrapper">
+              <div class="link-wrapper works--link--wrapper">
+                <div class="btn wrapper">
+                  <a href="#" class="btn-link">Get Started</a>
+                </div>
+              </div>
+              <a href="#" class="secondary-link">Book a Demo</a>
+            </div>
+          </div>
+          <img
+            src="./images/square-decoration.png"
+            alt="decorative-element"
+            class="banner--image"
+          />
+        </div>
+        <!-- HIGHLIGHTS -->
+        <div class="highlights">
+          <h3 class="highlights--heading">1M<span> users</span></h3>
+          <h3 class="highlights--heading">200K<span> downloads</span></h3>
+          <h3 class="highlights--heading">4.8<span> avg. rating</span></h3>
+          <h3 class="highlights--heading">24/7<span> support</span></h3>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="test section" id="testimonial">
+        <h2 class="heading--secondary mb-8">
+          Payflow Is the Best in the Business
+        </h2>
+        <h5 class="heading--section">Testimonials</h5>
+        <div class="test--grid">
+          <!-- Card 1 -->
+          <div class="test--card pattern js-e">
+            <div class="test--card--heading">"Highly Recommended"</div>
+            <p class="test--card--text">
+              "I've been using Payflow for a few months now and it's been a
+              game-changer for me. It's easy to use and keeps all of my invoices
+              organized in one place. Highly recommend!"
+            </p>
+            <div class="test--card--author--box">
+              <img
+                src="./images/cropped-user.webp"
+                alt="Profile picture of the user"
+                class="test--card--author--img"
+              />
+              <div class="test--card--author--wrapper">
+                <div class="test--card--author--name">Matt Soronson</div>
+                <p class="test--card--author--post">
+                  Chief Marketing Officer, Netflix
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="test--card pattern js-c">
+            <div class="test--card--heading">"Convenient and Easy"</div>
+            <p class="test--card--text">
+              "I can't imagine managing my invoices without this app. It's so
+              convenient to have everything in one place and not have to worry
+              about missing a payment"
+            </p>
+            <div class="test--card--author--box">
+              <img
+                src="./images/user3-compressed-cropped.webp"
+                alt="Profile picture of the user"
+                class="test--card--author--img"
+              />
+              <div class="test--card--author--wrapper">
+                <div class="test--card--author--name">Grace Vi</div>
+                <p class="test--card--author--post">
+                  Director of Growth, Coinbase
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="test--card pattern js-e">
+            <div class="test--card--heading">"Precise and Fast"</div>
+            <p class="test--card--text">
+              "I've tried several invoice tracking apps and this one is by far
+              the best. It has all the features I need to keep my invoices
+              organized and up-to-date"
+            </p>
+            <div class="test--card--author--box">
+              <img
+                src="./images/user-2-cropped.jpg"
+                class="test--card--author--img"
+                alt="Profile picture of the user"
+              />
+              <div class="test--card--author--wrapper">
+                <div class="test--card--author--name">Ethan Crossby</div>
+                <p class="test--card--author--post">Marketing Lead,Discord</p>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="test--card pattern js-c">
+            <div class="test--card--heading">"Fantastic Support"</div>
+            <p class="test--card--text">
+              "This app has been a lifesaver for me. The customer support is
+              also fantastic - I had a question and they responded quickly and
+              helped me resolve the issue."
+            </p>
+            <div class="test--card--author--box">
+              <img
+                src="./images/user-4-compressed.jpg"
+                alt="Profile picture of the user"
+                class="test--card--author--img"
+              />
+              <div class="test--card--author--wrapper">
+                <div class="test--card--author--name">Anna Williams</div>
+                <p class="test--card--author--post">Finance Officer,Spotify</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="link-wrapper">
+          <div class="btn wrapper">
+            <a href="#" class="btn-link">See all reviews</a>
+            <img src="./assets/right-arrow.svg" alt="icon of an arrow" />
+          </div>
+        </div>
+      </div>
+      <div class="section alt banner pattern">
+        <div class="banner--box">
+          <div class="banner--text--box">
+            <h3 class="banner--heading">
+              Sign up for our newsletter and <br />
+              get access to the latest tips!
+            </h3>
+            <p>You can usubscribe any time you like.</p>
+            <div class="wrapper banner--wrapper">
+              <input
+                type="email"
+                placeholder="yourname@email.com"
+                class="banner--input"
+                required
+              />
+
+              <div class="link-wrapper works--link--wrapper">
+                <div class="btn wrapper">
+                  <a href="#" class="btn-link">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="./images/square-decoration.png"
+            alt="decorative-element"
+            class="banner--image"
+          />
+        </div>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer--grid">
+        <div class="footer--left">
+          <svg
+            class="nav--logo"
+            xmlns="http://www.w3.org/2000/svg"
+            width="133"
+            height="32"
+            fill="none"
+            viewBox="0 0 133 32"
+          >
+            <path
+              class="nav--logo--dark"
+              fill="#3253A2"
+              d="M23.008 14.547a1.21 1.21 0 1 1-2.422 0 1.21 1.21 0 0 1 2.422 0Zm-4.602-6.055h-4.843a.727.727 0 0 0 0 1.453h4.843a.727.727 0 1 0 0-1.453Zm11.383 5.57v3.876a2.664 2.664 0 0 1-2.664 2.664h-.456l-2.02 5.656a1.695 1.695 0 0 1-1.598 1.125h-1.54a1.695 1.695 0 0 1-1.597-1.125l-.29-.813h-7.28l-.29.813a1.695 1.695 0 0 1-1.596 1.125h-1.54a1.695 1.695 0 0 1-1.598-1.125l-1.537-4.303a10.38 10.38 0 0 1-2.6-6.083 2.18 2.18 0 0 0-1.488 2.066.727.727 0 0 1-1.453 0 3.633 3.633 0 0 1 2.93-3.564 10.426 10.426 0 0 1 10.39-9.757h12.594a.727.727 0 1 1 0 1.453h-3.412A10.404 10.404 0 0 1 27.2 11.4a2.664 2.664 0 0 1 2.59 2.662Zm-1.453 0a1.21 1.21 0 0 0-1.211-1.21h-.443a.726.726 0 0 1-.694-.509 8.961 8.961 0 0 0-8.55-6.273h-3.875a8.961 8.961 0 0 0-6.607 15.016.7.7 0 0 1 .147.242l1.585 4.437a.242.242 0 0 0 .23.165h1.54a.242.242 0 0 0 .229-.161l.46-1.292a.726.726 0 0 1 .685-.485h8.305a.726.726 0 0 1 .684.485l.461 1.294a.243.243 0 0 0 .23.161h1.54a.242.242 0 0 0 .228-.16l2.192-6.14a.726.726 0 0 1 .684-.484h.969a1.211 1.211 0 0 0 1.21-1.21v-3.875Z"
+            />
+            <path
+              class="nav--logo--dark"
+              fill="#3253A2"
+              d="M37.617 25c-.183 0-.325-.05-.425-.15a.63.63 0 0 1-.15-.425V8.1c0-.183.05-.325.15-.425.1-.117.242-.175.425-.175h6.35c1.233 0 2.3.2 3.2.6.917.4 1.625 1 2.125 1.8.5.783.75 1.767.75 2.95 0 1.183-.25 2.167-.75 2.95-.5.783-1.208 1.375-2.125 1.775-.9.4-1.967.6-3.2.6h-4.425v6.25a.578.578 0 0 1-.175.425c-.1.1-.241.15-.425.15h-1.325Zm1.9-8.925h4.325c1.233 0 2.159-.275 2.775-.825.617-.55.925-1.35.925-2.4 0-1.033-.3-1.833-.9-2.4-.6-.567-1.533-.85-2.8-.85h-4.325v6.475Zm16.621 9.175c-.833 0-1.592-.167-2.275-.5a4.399 4.399 0 0 1-1.65-1.35 3.168 3.168 0 0 1-.625-1.925c0-1.15.467-2.067 1.4-2.75.933-.683 2.15-1.133 3.65-1.35l3.725-.525v-.725c0-.8-.233-1.425-.7-1.875-.45-.45-1.192-.675-2.225-.675-.75 0-1.358.15-1.825.45-.45.3-.767.683-.95 1.15-.1.25-.275.375-.525.375h-1.125c-.183 0-.325-.05-.425-.15a.671.671 0 0 1-.125-.4c0-.25.092-.558.275-.925.2-.367.5-.725.9-1.075s.908-.642 1.525-.875c.633-.25 1.4-.375 2.3-.375 1 0 1.842.133 2.525.4.683.25 1.217.592 1.6 1.025.4.433.683.925.85 1.475.183.55.275 1.108.275 1.675v8.1a.578.578 0 0 1-.175.425.54.54 0 0 1-.4.15h-1.15c-.183 0-.325-.05-.425-.15a.63.63 0 0 1-.15-.425V23.35c-.217.3-.508.6-.875.9-.367.283-.825.525-1.375.725-.55.183-1.225.275-2.025.275Zm.525-1.875a4.14 4.14 0 0 0 1.875-.425c.567-.3 1.008-.758 1.325-1.375.333-.617.5-1.392.5-2.325v-.7l-2.9.425c-1.183.167-2.075.45-2.675.85-.6.383-.9.875-.9 1.475 0 .467.133.858.4 1.175.283.3.633.525 1.05.675.433.15.875.225 1.325.225Zm11.65 6.375a.48.48 0 0 1-.35-.15.48.48 0 0 1-.15-.35.82.82 0 0 1 .025-.2 1.3 1.3 0 0 1 .1-.25l1.925-4.575-4.775-11.275c-.083-.2-.124-.342-.124-.425a.509.509 0 0 1 .525-.525h1.224c.167 0 .3.042.4.125a.6.6 0 0 1 .2.3l3.8 9.1 3.9-9.1a.944.944 0 0 1 .2-.3c.1-.083.242-.125.425-.125h1.175c.15 0 .275.05.376.15.1.1.15.217.15.35 0 .083-.042.233-.126.45l-7.1 16.375a.792.792 0 0 1-.225.3c-.083.083-.216.125-.4.125h-1.174ZM80.709 25c-.183 0-.325-.05-.425-.15a.63.63 0 0 1-.15-.425V8.1c0-.183.05-.325.15-.425.1-.117.242-.175.425-.175h10.2c.183 0 .325.058.425.175.1.1.15.242.15.425v1c0 .183-.05.325-.15.425-.1.1-.242.15-.425.15h-8.35V15.5h7.85c.183 0 .325.058.425.175.1.1.15.242.15.425v1a.63.63 0 0 1-.15.425c-.1.1-.242.15-.425.15h-7.85v6.75a.578.578 0 0 1-.175.425c-.1.1-.242.15-.425.15h-1.25Zm14.3 0a.631.631 0 0 1-.425-.15.63.63 0 0 1-.15-.425v-16.6c0-.167.05-.3.15-.4a.579.579 0 0 1 .425-.175h1.175c.183 0 .325.058.425.175.1.1.15.233.15.4v16.6a.63.63 0 0 1-.15.425c-.1.1-.242.15-.425.15h-1.175Zm10.804.25c-1.267 0-2.325-.242-3.175-.725a4.897 4.897 0 0 1-1.95-2c-.45-.867-.7-1.85-.75-2.95a18.986 18.986 0 0 1-.025-1.075c0-.45.008-.808.025-1.075.05-1.117.3-2.1.75-2.95a5.06 5.06 0 0 1 1.975-2c.85-.483 1.9-.725 3.15-.725s2.3.242 3.15.725c.85.483 1.5 1.15 1.95 2 .466.85.725 1.833.775 2.95.016.267.025.625.025 1.075 0 .433-.009.792-.025 1.075-.05 1.1-.3 2.083-.75 2.95-.45.85-1.1 1.517-1.95 2-.85.483-1.909.725-3.175.725Zm0-1.925c1.033 0 1.858-.325 2.475-.975.616-.667.95-1.633 1-2.9.016-.25.025-.567.025-.95s-.009-.7-.025-.95c-.05-1.267-.384-2.225-1-2.875-.617-.667-1.442-1-2.475-1-1.034 0-1.867.333-2.5 1-.617.65-.942 1.608-.975 2.875-.017.25-.025.567-.025.95s.008.7.025.95c.033 1.267.358 2.233.975 2.9.633.65 1.466.975 2.5.975ZM117.95 25c-.216 0-.383-.05-.5-.15a1.477 1.477 0 0 1-.3-.475l-3.55-11.6a.675.675 0 0 1-.05-.25c0-.15.05-.275.15-.375.117-.1.242-.15.375-.15h1.1c.184 0 .325.05.425.15.1.1.167.192.2.275l2.775 9.425 2.975-9.325a.953.953 0 0 1 .2-.35c.117-.117.284-.175.5-.175h.85c.217 0 .384.058.5.175.117.117.184.233.2.35l2.975 9.325 2.775-9.425a.581.581 0 0 1 .175-.275c.1-.1.242-.15.425-.15h1.1a.509.509 0 0 1 .525.525.656.656 0 0 1-.05.25l-3.55 11.6a.898.898 0 0 1-.275.475c-.116.1-.291.15-.525.15h-.975a.97.97 0 0 1-.55-.15.904.904 0 0 1-.275-.475l-2.9-8.95-2.9 8.95a1.05 1.05 0 0 1-.3.475c-.133.1-.316.15-.55.15h-.975Z"
+              opacity=".92"
+            />
+          </svg>
+          <p class="footer--subtext">
+            Say goodbye to the stress of invoices with PayFlow
+          </p>
+          <div class="link-wrapper works--link--wrapper">
+            <div class="btn wrapper footer--btn mb-31">
+              <a href="#" class="btn-link">Get Started</a>
+              <img src="./assets/arrow-up.svg " alt="Icon of an arrow" />
+            </div>
+          </div>
+          <div class="social--wrapper wrapper">
+            <a href="#">
+              <div class="social--box">
+                <img
+                  src="./assets/fb-icon.svg"
+                  alt="Social media icon"
+                  class="social--icon"
+                />
+              </div>
+            </a>
+            <a href="#">
+              <div class="social--box">
+                <img
+                  src="./assets/twitter-icon.svg"
+                  alt="Social media icon"
+                  class="social--icon"
+                />
+              </div>
+            </a>
+            <a href="">
+              <div class="social--box">
+                <img
+                  src="./assets/yt-icon.svg"
+                  alt="Social media icon"
+                  class="social--icon"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="footer--line"></div>
+        <!-- FOOTER LINKS -->
+        <div class="footer--right--wrapper">
+          <div class="footer--right">
+            <div class="links--box">
+              <div class="links--box--heading">product</div>
+              <div class="links--wrapper">
+                <a href="#" class="links">Pricing </a>
+                <a href="#" class="links">Intergration </a>
+                <a href="#" class="links">Customer </a>
+              </div>
+            </div>
+            <div class="links--box">
+              <div class="links--box--heading">resources</div>
+              <div class="links--wrapper">
+                <a href="#" class="links">Docs </a>
+                <a href="#" class="links">Changelog </a>
+                <a href="#" class="links">Security and Compliance </a>
+              </div>
+            </div>
+            <div class="links--box">
+              <div class="links--box--heading">Company</div>
+              <div class="links--wrapper">
+                <a href="#" class="links">Careers </a>
+                <a href="#" class="links">About </a>
+                <a href="#" class="links">Contant and Support </a>
+              </div>
+            </div>
+          </div>
+          <p class="footer--copy">
+            © 2023 Copyright .Designed and Developed by
+            <a href="#" class="footer--copy--link links">Mayank S.</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>

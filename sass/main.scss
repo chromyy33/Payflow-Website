@@ -1,0 +1,80 @@
+@import "./base", "./typography", "./variables", "./components_and_helper",
+  "./nav", "./scoial-proof", "./features", "./how_it_works", "./pricing",
+  "./testomonials", "./banner", "./footer", "./media-quries.scss";
+
+// FONT
+@import url("https://fonts.cdnfonts.com/css/red-hat-display");
+
+// Global Reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Red Hat Display"),
+    url(../assets/fonts/RedHatDisplay-Regular.woff) format(woff);
+  src: local("Red Hat Display"),
+    url(../assets/fonts/RedHatDisplay-Regular.woff2) format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Red Hat Display"),
+    url(../assets/fonts/RedHatDisplay-Medium.woff) format(woff);
+  src: local("Red Hat Display"),
+    url(../assets/fonts/RedHatDisplay-Medium.woff2) format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 600;
+  src: local("Red Hat Display"),
+    url(../assets/fonts/RedHatDisplay-SemiBold.woff) format(woff);
+  src: local("Red Hat Display"),
+    url(../assets/fonts/RedHatDisplay-SemiBold.woff2) format(woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Red Hat Display"),
+    url(../assets/fonts/RedHatDisplay-Bold.woff) format(woff);
+  src: local("Red Hat Display"),
+    url(../assets/fonts/RedHatDisplay-Bold.woff2) format(woff2);
+  font-display: swap;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  z-index: -1;
+}
+a {
+  text-decoration: none;
+}
+p {
+  color: $clr-grey-400;
+}
+*:focus {
+  outline: 5px solid $clr-blue-300;
+}

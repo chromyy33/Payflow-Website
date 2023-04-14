@@ -1,0 +1,53 @@
+.test {
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-top: 7.6rem;
+    margin-bottom: 7.6rem;
+    gap: 2rem;
+  }
+  &--card {
+    display: flex;
+    flex-direction: column;
+    max-width: 45rem;
+    padding: 9.5rem 4.8rem;
+    border-radius: 0.8rem;
+    &--heading {
+      font-size: 2.5rem;
+      color: $clr-blue-800;
+      font-weight: 500;
+      margin-bottom: 2.5rem;
+    }
+    &--text {
+      line-height: 160%;
+      margin-bottom: 3.9rem;
+    }
+    &--author {
+      &--box {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+      }
+      &--name {
+        font-size: 1.6rem;
+        color: $clr-blue-800;
+        font-weight: 500;
+      }
+      &--img {
+        height: 6.4rem;
+        width: 6.4rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center 20%;
+      }
+    }
+  }
+}
+.js-c {
+  justify-self: start !important;
+}
+.js-e {
+  justify-self: end;
+}

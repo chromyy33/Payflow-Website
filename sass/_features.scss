@@ -1,0 +1,32 @@
+.features {
+  margin: 11.9rem auto;
+  &--wrapper {
+    margin-top: 7.6rem;
+    margin-bottom: 6.1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    column-gap: 2rem;
+  }
+  &--card {
+    border: 0.5px solid $clr-blue-300;
+    padding: 9.5rem 2.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0px 0.6rem 1rem rgba($clr-blue-900, 0.05);
+  }
+  &--icon--cover {
+    background-color: $clr-blue-100;
+    width: 9.6rem;
+    height: 9.6rem;
+    border-radius: 0.8rem;
+  }
+  &--card--heading {
+    font-size: 2rem;
+    font-weight: 500;
+    color: $clr-blue-700;
+  }
+  &--card--text {
+    color: $clr-grey-400;
+    text-align: center;
+  }
+}

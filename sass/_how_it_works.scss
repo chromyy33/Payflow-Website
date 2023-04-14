@@ -1,0 +1,42 @@
+.works {
+  border: solid 0.5px $clr-grey-100;
+  border-bottom: transparent;
+  height: 80rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &--img--box {
+    width: 100%;
+    background-color: $clr-blue-100;
+  }
+  &--section {
+    margin-top: 7.5rem;
+  }
+  &--img {
+    max-width: 16rem;
+  }
+  &--text--box {
+    align-self: center;
+    padding: 0 9.5rem;
+  }
+  &--label {
+    color: $clr-blue-700;
+    width: fit-content;
+    background-color: #dbe5fd;
+    padding: 1rem 2rem;
+    border-radius: 0.4rem;
+  }
+  &--heading {
+    font-size: 3.1rem;
+    color: $clr-blue-800;
+    font-weight: 500;
+  }
+  &--text {
+    line-height: 160%;
+  }
+  &--link--wrapper {
+    justify-content: start;
+  }
+}
+.reverse {
+  order: 1;
+}

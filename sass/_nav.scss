@@ -1,0 +1,103 @@
+//Nav links
+.nav {
+  padding: 4.8rem 7.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--link--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.8rem;
+  }
+  &--end--wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+  }
+  &--btns {
+    display: none;
+    z-index: 3;
+  }
+  &--btn {
+    display: block;
+    width: 3.9rem;
+    height: 3.9rem;
+    color: $clr-blue-700;
+  }
+}
+
+//Hero heading
+.heading {
+  &--primary {
+    font-weight: 500;
+    color: $clr-blue-800;
+    text-align: center;
+    margin-top: 15vh;
+  }
+  &--secondary {
+    font-weight: 500;
+    color: $clr-blue-800;
+    letter-spacing: -2%;
+    text-align: center;
+  }
+  &--section {
+    text-transform: uppercase;
+    color: $clr-blue-600;
+    text-align: center;
+  }
+}
+//Hero sub heading
+.subtext {
+  color: $clr-grey-400;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+//Hero card
+.hero--card {
+  gap: 0.8rem;
+  background-color: $clr-blue-100;
+  padding: 2.4rem;
+  border-radius: 0.8rem;
+  &--icon {
+    width: 2.1rem;
+  }
+  &--text {
+    color: $clr-blue-700;
+  }
+}
+//Features
+.small--cards {
+  gap: 2.4rem;
+  margin: 0 auto;
+  margin-bottom: 6.1rem;
+}
+//Buttonss
+.cta {
+  gap: 1.6rem;
+  margin: 0 auto;
+  margin-bottom: 6.1rem;
+}
+//secondary btn
+.secondary--btn {
+  gap: 0.4rem;
+}
+//colored background
+.bg {
+  background-color: $clr-blue-100;
+}
+//Hero Image
+.hero {
+  padding: 9.5rem 0;
+  &--img {
+    width: 75%;
+  }
+}
+//Hero Pattern
+.pattern {
+  background-image: url(../images/pattern.png), url(../images/pattern.png);
+  background-size: 75%;
+}

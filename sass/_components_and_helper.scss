@@ -1,0 +1,133 @@
+//COMPONENTS
+
+//Section
+.section {
+  max-width: 144rem;
+  padding: 0 7.6rem;
+  margin: 11.9rem auto;
+}
+
+// General Links
+
+.links {
+  color: $clr-grey-400;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.links:link,
+.links:visited {
+  color: $clr-grey-400;
+}
+.links:hover,
+.links:active {
+  color: $clr-blue-700;
+  font-weight: 500;
+}
+//General Wrapper
+.wrapper {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Primary Button
+.link-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+//btn wrapper
+.btn {
+  gap: 0.4rem;
+  padding: 1.6rem 3.2rem;
+  background-color: $clr-blue-600;
+  border-radius: 50rem;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 0.6rem 1rem rgba($clr-blue-700, 0.3);
+}
+.secondary-link {
+  display: inline-block;
+  padding: 1.4rem 3.2rem;
+
+  border: 2px solid $clr-blue-600;
+  border-radius: 50rem;
+  transition: all 0.3s ease-out;
+  text-align: center;
+}
+
+.full {
+  width: 100%;
+}
+
+.secondary-link:link,
+.secondary-link:visited {
+  color: $clr-blue-600;
+}
+.secondary-link:hover,
+.secondary-link:active {
+  color: $clr-blue-100;
+  background-color: $clr-blue-600;
+}
+
+.btn:hover {
+  background-color: $clr-blue-700;
+}
+
+.btn-link:link,
+.btn-link:visited {
+  color: $clr-blue-100;
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+//HELPER
+.col {
+  flex-direction: column;
+}
+.center {
+  margin: 0 auto;
+}
+.mb-8 {
+  margin-bottom: 0.8rem;
+}
+.mb-16 {
+  margin-bottom: 1.6rem;
+}
+.mb-20 {
+  margin-bottom: 2rem;
+}
+.mb-25 {
+  margin-bottom: 2.5rem;
+}
+.mb-31 {
+  margin-bottom: 3.1rem;
+}
+.hidden {
+  display: none !important;
+}
+.block {
+  display: block;
+}
+
+.opacity {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+// STICKY NAV
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+.navbarOffsetMargin {
+  padding-top: 3.1rem;
+}

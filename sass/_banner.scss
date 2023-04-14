@@ -1,0 +1,63 @@
+.banner {
+  &--box {
+    display: flex;
+    justify-content: space-around;
+    padding: 11.9rem 0;
+  }
+  &--text--box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &--heading {
+    font-weight: 500;
+    color: $clr-blue-800;
+
+    line-height: 140%;
+  }
+  &--wrapper {
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+  &--image {
+    align-self: center;
+    width: 22%;
+  }
+  &--input {
+    -webkit-appearance: none;
+    height: 5.4rem;
+    width: 36rem;
+    border-radius: 0.8rem;
+    border: none;
+    padding: 0 1.6rem;
+  }
+  p {
+    margin-top: 2rem;
+    margin-bottom: 3.1rem;
+  }
+}
+.banner--input::placeholder {
+  font-family: "red hat display";
+  font-size: 1.6rem;
+  color: $clr-grey-200;
+}
+.banner--input[type="email"]:focus {
+  outline: 2px solid $clr-blue-500;
+  font-size: 1.6rem;
+  color: $clr-grey-400;
+}
+
+.highlights {
+  padding-bottom: 11.9rem;
+  display: flex;
+  justify-content: space-evenly;
+  &--heading {
+    font-weight: 600;
+    color: $clr-blue-700;
+  }
+  span {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
